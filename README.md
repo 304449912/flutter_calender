@@ -11,10 +11,10 @@ Add to your pubspec dependencies:
 
 Render the map with one of three options:
 
-#### 1. Default, Material Design
+### 1. 效果
 
 
 
-![standard view](https://github.com/304449912/flutter_calender/screenGif/screen.gif)
+![standard view](https://github.com/304449912/flutter_calender/blob/master/screenGif/screen.gif)
 
 ***
