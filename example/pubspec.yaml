@@ -1,0 +1,28 @@
+name: flutter_calendar_example
+description: Demonstrates the flutter_calendar widget
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_prada_calendar:
+    path: ../
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/no_data.png
+    - assets/bg_top.png
+    - assets/tick.png
+    - assets/avatars/avatar-1.jpg
+    - assets/avatars/avatar-2.jpg
+    - assets/avatars/avatar-3.jpg
+    - assets/avatars/avatar-4.jpg
+    - assets/avatars/avatar-5.jpg
+    - assets/avatars/avatar-6.jpg
+    - assets/avatars/default-avatar.jpg

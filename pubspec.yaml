@@ -1,0 +1,19 @@
+name: flutter_prada_calendar
+description: A calendar widget
+version: 0.0.1
+author: Prada
+homepage: https://github.com/304449912/flutter_calender
+
+environment:
+  sdk: ">=1.8.0 <2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
