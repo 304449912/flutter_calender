@@ -4,12 +4,28 @@
 
 ## 使用
 
-Add to your pubspec dependencies:
+
 ```dart
-    flutter_prada_calendar: ^0.0.1
+
+    import 'package:flutter_prada_calendar/calendar.dart';
+
+
+     Map<DateTime, int> map;
+     map = new Map();
+     map.putIfAbsent(new DateTime.now(), () {
+       return 2;
+     });
+     new CalendarWidget(
+        //controller: controller,
+        topColor: Colors.blue,
+        onDateClick: (time) {
+           print(time);
+        },
+        calendarMap: map,
+      )
 ```
 
-Render the map with one of three options:
+
 
 ### 1. 效果
 

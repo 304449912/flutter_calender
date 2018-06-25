@@ -26,12 +26,14 @@ class CalendarState extends State<CalendarWidget> {
   DateTime currentMonth;
   @override
   void initState() {
-    widget.controller.addListener(() {
-      pageController.jumpToPage(monthIndexFromTime(new DateTime.now()));
-      setState(() {
-        selectDate = new DateTime.now();
+    if (widget.controller != null) {
+      widget.controller.addListener(() {
+        pageController.jumpToPage(monthIndexFromTime(new DateTime.now()));
+        setState(() {
+          selectDate = new DateTime.now();
+        });
       });
-    });
+    }
     selectDate = widget.selectDate;
     super.initState();
   }
@@ -51,7 +53,10 @@ class CalendarState extends State<CalendarWidget> {
           child: new Center(
             child: new Text(
               weekdays[i],
-              style: new TextStyle(color: widget.topBackgroundImage == null && widget.topColor == null?Colors.black : Colors.white, fontSize: 12.0, fontWeight: FontWeight.w600),
+              style: new TextStyle(
+                  color: widget.topBackgroundImage == null && widget.topColor == null ? Colors.black : Colors.white,
+                  fontSize: 12.0,
+                  fontWeight: FontWeight.w600),
             ),
           ),
         ),
@@ -81,7 +86,10 @@ class CalendarState extends State<CalendarWidget> {
                       child: new Center(
                         child: new Text(
                           '${currentMonth.year} / ${currentMonth.month}',
-                          style: new TextStyle(color: widget.topBackgroundImage == null && widget.topColor == null?Colors.black : Colors.white, fontSize: 12.0, fontWeight: FontWeight.w800),
+                          style: new TextStyle(
+                              color: widget.topBackgroundImage == null && widget.topColor == null ? Colors.black : Colors.white,
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.w800),
                         ),
                       ),
                     ),
@@ -283,6 +291,9 @@ class _CalendarMonthDisplayState extends State<_CalendarMonthDisplay> {
   void initState() {
     super.initState();
     selectDate = widget.displayDate;
+    if(widget.calendarMap==null){
+      widget.calendarMap = new Map();
+    }
   }
 
   @override
